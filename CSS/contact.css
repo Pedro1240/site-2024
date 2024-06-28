@@ -1,0 +1,338 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Montserrat&family=Mooli&family=MuseoModerno&display=swap');
+
+/* Root-level CSS variables */
+:root {
+  --primary-color: #45a29e; /* Primary color */
+  --primary-color-dark: #44bbb5; /* Darker shade of primary color */
+  --secondary-color: #44bbb5; /* Secondary color */
+  --text-dark: #44bbb5; /* Dark text color */
+  --text-light: #c5c6c7; /* Light text color */
+  --extra-light: #1f2833; /* Extra light background color */
+  --max-width: 1200px; /* Maximum width of the content */
+}
+
+/* Resetting default styles for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Removing underlines from links */
+a {
+  text-decoration: none;
+}
+
+/* Setting the default font for the entire page */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigation bar styles */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+/* Styles for the content within the navigation bar */
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styles for the logo in the navigation bar */
+nav .logo a,
+.dropdown-content a {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+/* Hover effect for the logo */
+nav .logo a:hover,
+.dropdown-content a:hover {
+  color: var(--primary-color-dark);
+}
+
+/* Styles for a hidden checkbox element */
+nav .checkbox {
+  display: none;
+}
+
+/* Styles for hidden input elements */
+nav input {
+  display: none;
+}
+
+/* Styles for an icon within the navigation bar */
+nav .checkbox i {
+  font-size: 32px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Styles for the navigation links */
+ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+/* Styles for individual navigation links */
+ul li a {
+  padding: 8px 16px;
+  border: 2px inset transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+/* Hover effect for navigation links */
+ul li a:hover {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+/* Section styles */
+.section {
+  background-color: var(--extra-light);
+}
+
+/* Container styles for sections */
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+}
+
+/* Content styles within sections */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Subtitle styles */
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Title styles */
+.title {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+/* Span within titles */
+.title span {
+  font-weight: 600;
+}
+
+/* Description styles */
+.description {
+  line-height: 24px;
+  color: var(--text-light);
+  margin-bottom: 32px;
+}
+
+/* Action button styles */
+.action__btns {
+  display: flex;
+  gap: 16px;
+}
+
+/* Styles for buttons */
+.action__btns button {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 16px 32px;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
+
+/* Styles for images */
+.image {
+  display: grid;
+  place-items: center;
+  opacity: 90%;
+}
+
+/* Styles for images within sections */
+.image img {
+  width: min(500px, 90%);
+  border-radius: 25%;
+  box-shadow: 0px 0px 15px 0px rgba(7,214,204,1);
+}
+
+.dropdown {
+  display: none;
+}
+
+/* Contact form styles */
+.contact-form {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  outline: none;
+}
+
+.contact-form button {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Footer styles */
+footer {
+  background-color: #ffffff; /* Same color as the header */
+  padding: 24px 16px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: var(--primary-color);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 20px;
+  }
+
+  .section__container {
+    padding: 160px 16px 80px 16px;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+
+  .dropbtn {
+    padding-left: 20px;
+    background-color: #45a29e;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10%;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: #45a29e;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #44bbb5;
+  }
+
+  .contact-form {
+    margin: auto;
+  }
+}

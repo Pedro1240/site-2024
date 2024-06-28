@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/contact.css" />
+    <title>Contact Page</title>
+</head>
+<body>
+    <nav>
+        <div class="menu-icon">
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+            </label>
+        </div>
+        <div class="nav__content">
+            <div class="logo"><a href="#">Pedro</a></div>
+            <div class="dropdown">
+                <button class="dropbtn"> Menu </button>
+                <div class="dropdown-content">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </div>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="section__container">
+            <div class="content">
+                <h1 class="title">
+                    Contact Me
+                </h1>
+                <p class="description">
+                    Have questions or want to get in touch? Use the form below to send me a message.
+                </p>
+                <!-- Contact Form -->
+                <form action="https://api.web3forms.com/submit" method="post" class="contact-form">
+                    
+                    <input type="hidden" name="access_key" value="5bccf0b6-6c40-41e6-92ae-2deebb5ee9a3">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit" class="portfolio">Send Message</button>
+                </form>
+            </div>
+            <div class="image">
+              <img src="../IMG/contact3.jpg" alt="profile" loading="lazy" />
+          </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 - Pedro Borges</p>
+    </footer>
+</body>
+</html>
+
+<!-- 50.885155, 4.239314 -->
